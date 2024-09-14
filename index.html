@@ -1,21 +1,28 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ja">
-    <head>
-        <title>vue app</title>
-        <script src="https://unpkg.com/vue@2"></script>
-    </head>
-    <body>
-        <h1>Vue</h1>
-        <div id="app">
-            {{ message }}
-        </div>
-        <script>
-            var app = new Vue({
-                el: '#app',
-                data: {
-                    message: 'Hello Vue'
-                }
-            })
-        </script>
-    </body>
+  <head>
+    <title>テストページ</title>
+    <script src="https://unpkg.com/vue@2"></script>
+  </head>
+  <body>
+    <h1>Helo</h1>
+    <div id="app">{{ message }}</div>
+    <hr />
+    <button onclick="doAction()">click</button>
+
+    <script>
+      var data = {
+        message: 'Hello Vue',
+      };
+
+      var app = new Vue({
+        el: '#app',
+        data: data,
+      });
+
+      function doAction() {
+        data.message = 'You clicked';
+      }
+    </script>
+  </body>
 </html>
