@@ -2,6 +2,12 @@
   <div class="hello">
     <h1>{{ title }}</h1>
     <p>{{ message }}</p>
+    <hr>
+    <div>
+      <input type="text" v-model="input">
+      <button v-on:click="doAction">Click</button>
+    </div>
+
   </div>
 </template>
 
@@ -10,7 +16,18 @@ export default {
   name: 'HelloWorld',
   props: {
     title: String,
-    message: String
+  },
+  data: function() {
+    return {
+      message: 'お名前は？',
+      input: 'no name'
+    }
+  },
+  methods: {
+    doAction: function() {
+      console.log('hoge-------------------------')
+      this.message = 'こんにちは,' + this.input + 'さん'
+    }
   }
 }
 </script>

@@ -1,6 +1,5 @@
 <template>
-  <HelloWorld
-    title="Hello" message="サンプルプロジェクトです。"/>
+  <HelloWorld title="Hello"/>
 </template>
 
 <script>
