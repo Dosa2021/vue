@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <title>テストページ</title>
+        <script src="https://unpkg.com/vue@2"></script>
+    </head>
+    <body>
+        <h1>v-html</h1>
+        <div id="app">
+            <hello/>
+        </div>
+        <hr>
+        <input type="number" onChange="doChange(event)" value="20">
+
+        <script>
+            Vue.component('hello',
+            {
+                template: '<p class="hello">Hello</p>'
+            }
+            )
+
+            var app = new Vue({
+                el: '#app'
+            });
+        </script>
+    </body>
+</html>
