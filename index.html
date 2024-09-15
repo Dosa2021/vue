@@ -12,29 +12,32 @@
     <input type="text" onInput="doAction(event)">
 
     <script>
-      // var data = {
-      //   message: 'Hello Vue',
-      // };
       var data = {
-        message: 'please type',
+        message: 'Hello Vue',
       };
+      // var data = {
+      //   message: 'please type',
+      // };
 
       var app = new Vue({
         el: '#app',
         data: data,
+        render: (element) => {
+          return element("p", data.message)
+        }
       });
 
       // NOTE: 押下するとメッセージが変わる
       // onclick
-      // function doAction() {
-      //   data.message = 'You clicked';
-      // }
+      function doAction() {
+        data.message = 'You clicked';
+      }
 
       // NOTE: 入力テキストをリアルタイムで表示
       // onInput
-      function doAction(event) {
-        data.message = event.target.value
-      }
+      // function doAction(event) {
+      //   data.message = event.target.value
+      // }
 
     </script>
   </body>
