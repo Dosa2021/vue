@@ -14,3 +14,4 @@ template
 ・v-on
 ・methods
 ・算術プロパティ
+・ローカル
