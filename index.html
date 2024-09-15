@@ -6,13 +6,17 @@
   </head>
   <body>
     <h1>Helo</h1>
-    <div id="app">{{ message }}</div>
+    <div id="app">{{ message.toUpperCase() }}</div>
     <hr />
     <button onclick="doAction()">click</button>
+    <input type="text" onInput="doAction(event)">
 
     <script>
+      // var data = {
+      //   message: 'Hello Vue',
+      // };
       var data = {
-        message: 'Hello Vue',
+        message: 'please type',
       };
 
       var app = new Vue({
@@ -20,9 +24,18 @@
         data: data,
       });
 
-      function doAction() {
-        data.message = 'You clicked';
+      // NOTE: 押下するとメッセージが変わる
+      // onclick
+      // function doAction() {
+      //   data.message = 'You clicked';
+      // }
+
+      // NOTE: 入力テキストをリアルタイムで表示
+      // onInput
+      function doAction(event) {
+        data.message = event.target.value
       }
+
     </script>
   </body>
 </html>
