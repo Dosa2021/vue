@@ -12,3 +12,4 @@ template
 ・props
 ・v-model
 ・v-on
+・methods

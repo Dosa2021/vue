@@ -5,6 +5,12 @@
         <script src="https://unpkg.com/vue@2"></script>
     </head>
     <body>
+        <style>
+            .red {
+                color: red;
+            }
+        </style>
+
         <h1>v-html</h1>
         <div id="app">
             <div>
@@ -16,10 +22,24 @@
                 {
                     data:function() {
                         return {
-                            counter: 0
+                            counter: 0,
+                            isRed: false
                         }
                     },
-                    template: '<p v-on:click="counter++" class="hello">clicked:{{ counter }}</p>'
+                    methods: {
+                        doAction: function(event) {
+                            this.counter++
+                            if (this.counter > 10) {
+                                this.counter = 0
+                            }
+                            if (this.counter % 2) {
+                                this.isRed = false
+                            } else {
+                                this.isRed = true
+                            }
+                        }
+                    },
+                    template: '<p v-bind:class="{red:isRed}" v-on:click="doAction" class="hello">clicked:{{ counter }}</p>'
                 }
             )
 
