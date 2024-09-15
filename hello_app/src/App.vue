@@ -1,5 +1,8 @@
 <template>
-  <HelloWorld title="Hello"/>
+  <HelloWorld v-bind:title="message"/>
+  <hr>
+  <button v-on:click="doAction">Change Title</button>
+
 </template>
 
 <script>
@@ -9,6 +12,17 @@ export default {
   name: 'app',
   components: {
     HelloWorld
+  },
+  data: function() {
+    return {
+      message: 'HELLO',
+    }
+  },
+  methods: {
+    doAction: function() {
+      var input = prompt("new title")
+      this.message = input
+    }
   }
 }
 </script>
