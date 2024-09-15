@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <title>テストページ</title>
+        <script src="https://unpkg.com/vue@2"></script>
+    </head>
+    <body>
+        <h1>v-for</h1>
+        <div id="app">
+            <table>
+                <tr>
+                    <th>name</th>
+                    <th>mail</th>
+                    <th>tel</th>
+                </tr>
+                <tr v-for="(item, id) in items">
+                    <td>{{ id }}</td>
+                    <td>{{ item.name }}</td>
+                    <td>{{ item.mail }}</td>
+                </tr>
+            </table>
+        </div>
+        <script>
+            var data = {
+                items: [
+                    {name: 'taro', mail: 'taro@yamada', tel: '999-999'},
+                    {name: 'suzuki', mail: 'taro@yamada', tel: '999-999'}
+                ]
+            };
+
+            var app = new Vue({
+                el: '#app',
+                data: data,
+            });
+        </script>
+    </body>
+</html>

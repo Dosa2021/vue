@@ -1,21 +1,52 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ja">
-    <head>
-        <title>vue app</title>
-        <script src="https://unpkg.com/vue@2"></script>
-    </head>
-    <body>
-        <h1>Vue</h1>
-        <div id="app">
-            {{ message }}
-        </div>
-        <script>
-            var app = new Vue({
-                el: '#app',
-                data: {
-                    message: 'Hello Vue'
-                }
-            })
-        </script>
-    </body>
+  <head>
+    <title>テストページ</title>
+    <script src="https://unpkg.com/vue@2"></script>
+  </head>
+  <body>
+    <h1>Helo</h1>
+    <div id="app">{{ message.toUpperCase() }}</div>
+    <hr />
+    <button onclick="doAction()">click</button>
+    <input type="text" onInput="doAction(event)">
+
+    <script>
+      var data = {
+        message: 'Hello Vue',
+        items: ['One', 'Two', 'Three', 'Four', 'Five']
+
+      };
+      // var data = {
+      //   message: 'please type',
+      // };
+
+      var app = new Vue({
+        el: '#app',
+        data: data,
+        render: (element) => {
+          var p = element("p",
+            {'style': 'font-seize: 20p;'},
+            data.message)
+          var li = data.items.map(item=> element('li', item))
+          var ol = element("ol", li)
+          var div = element("div", [p, ol])
+          return div
+        }
+      });
+
+      // NOTE: 押下するとメッセージが変わる
+      // onclick
+      function doAction() {
+        data.message = 'You clicked';
+      }
+
+      // NOTE: 入力テキストをリアルタイムで表示
+      // onInput
+      // function doAction(event) {
+      //   data.message = event.target.value
+      // }
+
+    </script>
+  </body>
 </html>
