@@ -7,16 +7,31 @@
     <body>
         <h1>v-html</h1>
         <div id="app">
-            <hello/>
+            <!-- <hello/> -->
+                <div>
+                    <hello name="1"/>
+                </div>
+                <div>
+                    <hello name="suzuki"/>
+                </div>
         </div>
-        <hr>
-        <input type="number" onChange="doChange(event)" value="20">
-
         <script>
+            // Vue.component('hello',
+            //     {
+            //         data:function() {
+            //             return {
+            //                 message: 'これは新しいメッセージです'
+            //             }
+            //         },
+            //         template: '<p class="hello">{{ message }}</p>'
+            //     }
+            // )
+
             Vue.component('hello',
-            {
-                template: '<p class="hello">Hello</p>'
-            }
+                {
+                    props: { name:String },
+                    template: '<p class="hello">Hello, {{ name }}</p>'
+                }
             )
 
             var app = new Vue({
