@@ -13,3 +13,4 @@ template
 ・v-model
 ・v-on
 ・methods
+・算術プロパティ
