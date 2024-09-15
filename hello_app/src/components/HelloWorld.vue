@@ -25,8 +25,8 @@ export default {
   },
   methods: {
     doAction: function() {
-      console.log('hoge-------------------------')
       this.message = 'こんにちは,' + this.input + 'さん'
+      this.$emit("result-event", this.input);
     }
   }
 }

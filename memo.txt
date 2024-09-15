@@ -15,3 +15,6 @@ template
 ・methods
 ・算術プロパティ
 ・ローカル
+・$emit
+    → 子から親へ
+    https://qiita.com/s_ryota/items/e17215dcdf438401fcab
