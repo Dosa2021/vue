@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <title>テストページ</title>
+        <script src="https://unpkg.com/vue@2"></script>
+    </head>
+    <body>
+        <style>
+            .ok {
+                font-size: 24pt;
+                color: blue;
+            }
+            .ng {
+                font-size: 20pt;
+                color: red;
+            }
+        </style>
+        <h1>v-if</h1>
+        <div id="app">
+            <p v-if="flag" class="ok">
+                これは正常な表示です
+            </p>
+            <p v-else class="ng">
+                ※ 現在、問題発生中。。
+            </p>
+        </div>
+        <button onClick="doAction()">
+            Click
+        </button>
+        <hr>
+        <script>
+            var data = {
+                flag: true
+            };
+
+            var app = new Vue({
+                el: '#app',
+                data: data,
+            });
+
+            function doAction() {
+                data.flag = !data.flag
+            }
+        </script>
+    </body>
+</html>

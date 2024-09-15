@@ -14,6 +14,8 @@
     <script>
       var data = {
         message: 'Hello Vue',
+        items: ['One', 'Two', 'Three', 'Four', 'Five']
+
       };
       // var data = {
       //   message: 'please type',
@@ -23,7 +25,13 @@
         el: '#app',
         data: data,
         render: (element) => {
-          return element("p", data.message)
+          var p = element("p",
+            {'style': 'font-seize: 20p;'},
+            data.message)
+          var li = data.items.map(item=> element('li', item))
+          var ol = element("ol", li)
+          var div = element("div", [p, ol])
+          return div
         }
       });
 
