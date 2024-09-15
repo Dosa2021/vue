@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <title>テストページ</title>
+        <script src="https://unpkg.com/vue@2"></script>
+    </head>
+    <body>
+        <h1>v-html</h1>
+        <div id="app">
+            <div>
+                <hello/>
+            </div>
+        </div>
+        <script>
+            Vue.component('hello',
+                {
+                    data:function() {
+                        return {
+                            counter: 0
+                        }
+                    },
+                    template: '<p v-on:click="counter++" class="hello">clicked:{{ counter }}</p>'
+                }
+            )
+
+            var app = new Vue({
+                el: '#app',
+            });
+        </script>
+    </body>
+</html>

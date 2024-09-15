@@ -5,3 +5,10 @@ v-html
 v-bind
 v-if
 template
+
+
+# 3. コンポーネント
+
+・props
+・v-model
+・v-on

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <title>テストページ</title>
+        <script src="https://unpkg.com/vue@2"></script>
+    </head>
+    <body>
+        <h1>v-html</h1>
+        <div id="app">
+            <hello v-for="item in data" v-bind:name="item"/>
+        </div>
+        <script>
+            Vue.component('hello',
+                {
+                    props: { name:String },
+                    template: '<p class="hello">Hello, {{ name }}</p>'
+                }
+            )
+
+            var app = new Vue({
+                el: '#app',
+                data: {
+                    data: ['taro', 'hanako']
+                }
+            });
+        </script>
+    </body>
+</html>
