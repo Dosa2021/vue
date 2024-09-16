@@ -32,3 +32,8 @@ https://github.com/Dosa2021/vue/pull/3/commits/b0acf27705f4cc3f5a3967592c332cfce
 
 ・監視（watch）
     → 飛ばした
+
+
+# 5. Nuxt.js
+
+npm run dev
