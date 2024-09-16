@@ -1,9 +1,13 @@
 <template>
-  <Tutorial/>
+  <div>{{ title }}</div>
 </template>
 
 <script>
 export default {
-  name: 'IndexPage'
+  data: function() {
+    return {
+      title: 'おっぱい'
+    }
+  }
 }
 </script>
