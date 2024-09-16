@@ -35,5 +35,13 @@ https://github.com/Dosa2021/vue/pull/3/commits/b0acf27705f4cc3f5a3967592c332cfce
 
 
 # 5. Nuxt.js
+https://github.com/Dosa2021/vue/pull/4
 
 npm run dev
+
+
+・Vuex
+    ・mutations
+    https://qiita.com/Yudai_35_/items/2927dc0c731dea698ab9
+
+    ・vuex-persistedstate
