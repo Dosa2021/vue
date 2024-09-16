@@ -5,3 +5,16 @@ v-html
 v-bind
 v-if
 template
+
+
+# 3. コンポーネント
+
+・props
+・v-model
+・v-on
+・methods
+・算術プロパティ
+・ローカル
+・$emit
+    → 子から親へ
+    https://qiita.com/s_ryota/items/e17215dcdf438401fcab
