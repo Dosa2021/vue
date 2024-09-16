@@ -1,42 +1,18 @@
 <template>
-  <HelloWorld v-bind:title="message" v-bind:num="num"/>
-  <hr>
-
+  <SlotTest>
+    <p>p text </p>
+  </SlotTest>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import SlotTest from './components/SlotTest'
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
-  },
-  data: function() {
-    return {
-      message: 'HELLO',
-      num: 'no event'
-    }
-  },
-  methods: {
-    //doAction: function() {
-    //  var input = prompt("new title")
-    //  this.message = input
-    //}
-    //appAction: function(message) {
-    //  this.result = '(*** you send: ' + message +  '**)'
-    //}
+    SlotTest
   }
 }
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+<style></style>
