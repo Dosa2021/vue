@@ -41,3 +41,7 @@ npm run dev
 
 
 ・Vuex
+    ・mutations
+    https://qiita.com/Yudai_35_/items/2927dc0c731dea698ab9
+
+    ・vuex-persistedstate
