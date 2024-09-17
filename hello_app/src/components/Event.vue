@@ -1,11 +1,5 @@
 <template>
-  <div class="hello">
-    <h1>{{ title }}</h1>
-    <p>{{ message }}</p>
-    <hr>
-    <p>Number: {{ num }}</p>
-
-  </div>
+    event
 </template>
 
 <script>
@@ -32,5 +26,3 @@ export default {
 }
 </script>
 
-<style>
-</style>

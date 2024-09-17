@@ -1,3 +1,5 @@
+yarn serve
+
 render
 https://qiita.com/takuo_maeda/items/a5cd164e0652291baf86
 
@@ -18,3 +20,20 @@ template
 ・$emit
     → 子から親へ
     https://qiita.com/s_ryota/items/e17215dcdf438401fcab
+
+
+# 4. コンポーネント掘り下げ
+
+・validator
+https://github.com/Dosa2021/vue/pull/3/commits/b0acf27705f4cc3f5a3967592c332cfce627211e
+
+・getter/setter
+    → 飛ばした
+
+・監視（watch）
+    → 飛ばした
+
+
+# 5. Nuxt.js
+
+npm run dev
